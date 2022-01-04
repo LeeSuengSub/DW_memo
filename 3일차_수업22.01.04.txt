@@ -35,3 +35,7 @@ add를 한 후 commit을 해 내 폴더에 저장을 한다.
 vscode 단축키
 Ctrl+ B
 Ctrl+Shift+P
+
+README.md
+README는 대문지로 입력
+화면 우측 상단에 돋보기 모양을 클릭하면 미리보기가 가능하다.
