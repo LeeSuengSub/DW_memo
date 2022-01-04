@@ -32,4 +32,6 @@ add를 한 후 commit을 해 내 폴더에 저장을 한다.
 마지막 퇴근 전에 push를 해 깃허브에 업로드를 한다.
  pull, add, commit, push
 
+vscode 단축키
+Ctrl+ B
 Ctrl+Shift+P
