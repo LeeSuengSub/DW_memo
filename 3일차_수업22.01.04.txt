@@ -39,3 +39,6 @@ Ctrl+Shift+P
 README.md
 README는 대문지로 입력
 화면 우측 상단에 돋보기 모양을 클릭하면 미리보기가 가능하다.
+
+오늘 배운 내용은 Git, Github 사용법(push, pull, commit, clone, add)
+VScode를 이용한 Github에 push하는 법.
