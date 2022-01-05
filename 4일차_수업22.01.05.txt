@@ -133,7 +133,7 @@ emp 더블클릭해서 데이터 누르면 방금 입력한 데이터들이 들�
 테이블 먼저 입력하고 데이터를 입력한다.
 
 ***DDL(Data Definition Language) 데이터 정의 언어
-CREARE TABLE <table_name> : table 생성
+CREATE TABLE <table_name> : table 생성
 DROP TABLE <table_name> : table 삭제
 ALTER TABLE <table_name> : table 수정 (테이블 이름 변경할때 씀)
 
