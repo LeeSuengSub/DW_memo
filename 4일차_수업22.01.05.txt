@@ -87,3 +87,70 @@ where actor_id = 2
 검색을 헸는데 스택오버사이트나 velog사이트가 없으면 제일상단에 있는 블로그로 들어가기
 how to, what is 가 앞에 입력하고 뒤에 in java(언어)를 입력하면 정확하게 나온다.
 영어가 어려우면 네이버 번역기에 입력을 한 후 번역본을 구글에 입력을 하면 된다
+
+
+database(db)
+mySQL->DB-> table-> data
+즉 데이터는 테이블안에 들어있는 것이고,
+
+대부분의 테이블에는 다 관계가 있다.
+Mysql을 
+
+RDB 관계형 데이터베이스
+비관계형 데이터베이스도 존재한다
+웹, 앱을 개발할때는 관계형 데이터베이스를 사용한다.
+
+우리 수업은 RDB를 배운다.
+블록체인은 데이터베이스이다.
+블록체인은 비관계형데이터베이스이다.
+관계형 데이터베이스는 서로서로 설정할 수 있다.
+
+정수는 int는 4바이트
+문자는 varchar
+
+이것만 알면 된다!
+1bite = 8bit =2의 8승= 256
+
+숫자의 낭비가 나면 small int를 사용한다.
+
+
+***DDL(Data Definition Language) 데이터 정의 언어
+CREARE TABLE <table_name> : table 생성
+DROP TABLE <table_name> : table 삭제
+ALTER TABLE <table_name> : table 수정 (테이블 이름 변경할때 씀)
+
+
+***DML(Data Manipulation Language) 데이터 조작 언어   <-데이터베이스에 다쓰임(오라클, MySQL등)
+select: 데이터 조회
+DELETE: 데이터 삭제
+UPDATE: 데이터 수정
+INSERT: 데이터 생성
+
+
+DCL: (Data Control language) 데이터 제어 언어
+grant: 특정 사용자에게 권한 부여
+REVOKE: 특정 사용자 권한 회수
+
+
+데이터베이스에도 commit이 있다.
+디비버는 오토커밋이어서 자동으로 commit이 된다.
+
+
+
+ctrl+a -> Alt+X
+
+
+맨 위에 박스쳐져 있는 것들은 고유 번호이다. PK 
+그 아래 나열되어 있는 것들은 속성(컬럼)이다.
+하나의 행을 컬럼이라고 한다.
+
+컬럼,pk(primary key)
+
+
+select 다음에는 컬럼
+from 다음에는 찾는 곳
+where 찾는 위치
+
+순서 : from-> where -> select 순서로 검색된다.
+
+테이블부터 그다음 인서트.
