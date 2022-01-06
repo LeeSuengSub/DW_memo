@@ -55,6 +55,9 @@ sal: 월급
 comm: 보너스
 DEPTNO: 부서번호
 
+직업
+-clerk: 사무원
+
 
 where절에서 컬럼명이 왼쪽에 오고 데이터가 오른쪽에 온다.
 문자를 검색을 할떄는 '',""을 사용한다.
@@ -71,7 +74,7 @@ where절에서 컬럼명이 왼쪽에 오고 데이터가 오른쪽에 온다.
 or은 두개 중에 하나라도 참이면 or을 사용한다.
 
 로그인을 예로 하면,
-and는 로그인 할때 id, passwoed가 둘다 맞으면 로그인이 되고,
+and는 로그인 할때 id, password가 둘다 맞으면 로그인이 되고,
 or은 로그인 할때 하나가 틀려도 로그인이 가능해지는 불상사가 일어난다.
 
 정렬은 where문 뒤에 온다.
@@ -158,3 +161,63 @@ set job = 'MANAGER',
 sal = 8000
 where empno = 8003;
 
+통계
+count(*)
+sum(컬럼이름),
+vg()
+max()
+min()
+
+
+
+1.select
+2.delete
+3.update
+4.insert
+
+from
+where
+order by
+and
+or
+등호
+is
+like
+group by
+having
+
+
+그룹핑
+select 
+job
+from emp
+group by JOB <- 얘
+
+통계함수하고 group by 는 같이 쓰인다.
+
+having은 group by 한 후 쓰인다.
+group by 후 통계를 해야 할때 having을 사용한다.
+
+where절에는 그룹핑한 얘들을 못 쓴다.
+
+각 부서별이라는 말이 나오면 group by를 해야 하는구나.
+
+select-> 찾는것-> from-> where-> group by-> having
+
+검색순서(해석순서)
+-> from-> where-> group by-> having-> select
+*order by는 추가되면 맨마지막.
+
+
+현재 가지고 있는 자료로는 job, deptno만 그룹으로 묶을수 있다.
+
+group by는 공통점이 있어야 묶을 수 있다.
+
+or은 where 절에 적는다.
+
+
+where절에는 함수오지 못한다.(에러남.)
+함수는 having에 적는다.
+
+where절
+or뒤에 또 where를 적을 필요가 없다.
