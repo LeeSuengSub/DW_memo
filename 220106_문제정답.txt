@@ -1,0 +1,62 @@
+1.
+select 
+avg(sal)
+from emp 
+where job = 'manager'
+
+2.
+select
+count(*),
+avg(sal)
+from emp 
+where hiredate = '1987-06-28'
+
+3.
+select 
+ename,
+hiredate
+from emp 
+where job = 'clerk'
+having min(SAL)
+
+보너스.
+select
+sum(comm)
+from emp 
+where comm is not null 
+or job = 'salesman'
+or hiredate = '1987-02-22'
+
+응용 문제
+1. < 정답.
+select 
+deptno,
+job,
+max(sal),
+count(*),
+min(sal)
+from emp 
+where deptno != 10
+group by job, DEPTNO 
+having count(*) <= 3
+order by count(*)
+
+2. <정답.
+select 
+deptno,
+sum(sal)
+from emp 
+where deptno = 10
+or deptno = 30
+group by DEPTNO 
+having sum(sal) >= 5000
+
+3. <정답.
+select 
+job,
+sum(sal),
+avg(sal)
+from emp 
+where job != 'manager'
+group by JOB 
+having avg(sal) >= 1000
