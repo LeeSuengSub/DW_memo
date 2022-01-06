@@ -3,9 +3,8 @@
 데이터베이스-> 테이블-> 데이터
 테이블은 데이터를 저장하는 곳이고 데이터베이스는 테이블을 저장하는 곳이다.
 
-1.데이터를 저장하는 프로그램을 배우는 것!
-=>  DB(데이터베이스)
-
+데이터베이스
+1.데이터를 저장하는 프로그램
 2.SQL이라는 문법을 통해서 데이터를 가져와야함.
 
 **정보처리기사 준비하시는 분들은 (필기 단골 문제)
@@ -58,10 +57,10 @@ where절에서는 컬럼명이 왼쪽에 오고 데이터가 오른쪽에 온다
 오류가 났으면, 오타를 확인하자.
 
 ****관계연산자.
-->      >,<,<=,>=, =, != (다르다를 의미.)
+->      >(초과),<(미만),<=(이하),>=(이상), =(같다), != (다르다를 의미.)
 
 ****논리 연산자
-->      and, or
+->      and(두개가 참일 경우), or(두개중에 하나만 맞아도 괜찮은 경우)
 
 이름: 홍길동 and 나이: 50 <- 두개가 참일때 and를 사용한다.
 or은 두개 중에 하나라도 참이면 or을 사용한다.
@@ -73,18 +72,9 @@ or은 로그인 할때 하나가 틀려도 로그인이 가능해지는 불상�
 정렬은 where문 뒤에 온다.
 
 정렬
-order by <컬럼 이름> desc 나 asc
+order by (컬럼) desc 나 asc
 desc는 내림차순,
-asc는 오름차순
-
-오름차순은 디폴트
-내림차순으로 하고 싶으면 desc
-
-
-몇명인지 숫자만 확인하고 싶으면 count(*)
-count(*) as '별명' <- 컬럼에 별명이 설정되서 나온다.
-as를 많이 사용한다.
-as를 적고 뒤에 '별명'을 적는다
+asc는 오름차순(입력을 하지않아도 디폴트값으로 저장 되어있음)
 
 
 해석순서
@@ -104,10 +94,15 @@ comm이 null인 아닌 사람.
 where comm is null
 comm이 null인 사람.
 
-null은 해당 데이터를 안 넣었다.
+null은 데이터를 넣지 않은 것을 의미.(is null (null인것)/ is not null (null이 아닌것))
 null 데이터는 조회하지 않는다.
 
-코드가 중복이 되면 좋은 코드가 아니다.
+문제) emp table에서 보너스가 없는(null) 사람과 급여를 조회하시오.
+-select
+ename,
+sal -from
+emp
+-where comm is (not) null
 
 
 -like문
@@ -130,20 +125,17 @@ values
 (8000,'이승섭','salesman',7900,'2022-01-06',5000,1000,30)
 
 null로 데이터를 넣고싶으면 insert into emp
-(enpno,ename,job,mgr,hiredata,sal,comm,depno) <- null로 넣고 싶은 부분을 비워두면된다.
-
-insert into <- 어? 너 어디테이블에 저장할꺼니?
-
+(enpno,ename,job,mgr,hiredata,sal,comm,depno) <- deptno가 빠지면 deptno는 null(데이터를 넣지 않는것)이 된다.
+insert into <- 어? 너 어디테이블에 생성할꺼야?
 
 insert 주의점.
--위아래 해당 컬럼이 맞는지 확인해야한다.
- 이름을 적는 곳에 숫자를 넣으면 당연히 오류가 나듯이.
+insert와 value의 순서를 맞쥐져야 한다.
 -오타 확인은 필수.
 
 -update문
-update emp
+update emp(테이블)
 set ename = '정우성' <- 이상태로 진행하면 모든 사람의 이름이 '정우성'이 된다.
-where 테이블 = empno 번호
+where empno(테이블) = 번호
 
 ***where <-필수로 와야 한다.
 
@@ -158,10 +150,16 @@ where empno = 8003;
 
 -통계
 count(*)
-sum(컬럼이름),
-avg()
-max()
-min()
+sum(컬럼이름)<---총합
+avg()<---평균
+max()<---최대값
+min()<---최소값
+
+
+몇명인지 숫자만 확인하고 싶으면 count(*)
+count(*) as '별명' <- 컬럼에 별명이 설정되서 나온다.
+as를 많이 사용한다.
+as를 적고 뒤에 '별명'을 적는다
 
 
 1.select
@@ -182,15 +180,20 @@ having
 order by
 
 
-그룹핑
+그룹핑(여러가지 목록을 그룹화 하는것)
 select 
 job
 from emp
 group by JOB <- 얘
 
+group by는 공통점이 있어야 묶을 수 있다.
+group by는 where 뒤에 온다.
+group by와 통계 ㅎ마수는 친구 사이.
 
-having은 group by 한 후 쓰인다.
-group by 후 통계를 해야 할때 having을 사용한다.
+having(통계함수와 같이 쓰이는 코드)
+group by한 애들에서의 필터링하는 코드
+group by 뒤에 쓴다.
+-쿼리순서: from-> where-> group by-> having-> select
 
 where절에는 그룹핑한 얘들을 못 쓴다.
 
@@ -206,7 +209,6 @@ select-> 찾는것-> from-> where-> group by-> having-> order by(항상 맨 마�
 
 현재 가지고 있는 자료로는 job, deptno만 그룹으로 묶을수 있다.
 
-group by는 공통점이 있어야 묶을 수 있다.
 
 or은 where 절에 적는다.
 
@@ -220,6 +222,15 @@ or뒤에 또 where를 적을 필요가 없다.
 
 
 is: null을 활용할 때만 사용.
+
+
+코드가 중복이 되면 좋은 코드가 아니다.
+
+
+쿼리순서 읽는법
+1.from-> where-> select
+2.from-> where-> select-> order by
+3.from-> where-> group by-> having-> select-> order by
 
 
 컴퓨터 설치 TIP
