@@ -133,7 +133,7 @@ insert와 value의 순서를 맞쥐져야 한다.
 -오타 확인은 필수.
 
 -update문
-update emp(테이블)
+update emp <-- (테이블)
 set ename = '정우성' <- 이상태로 진행하면 모든 사람의 이름이 '정우성'이 된다.
 where empno(테이블) = 번호
 
