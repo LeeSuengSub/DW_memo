@@ -21,7 +21,7 @@ inner join dept as d
 on e.deptno = d.DEPTNO 
 where comm is not null
 
-3) 이름 첫글 A자를 가진 사원에 대해 이름, 업무, 부서명, 부서 위치를 출력
+3) 이름 첫글 A자를 가진 사원에 대해 이름, 업무, 부서명, 부서 위치를 출력 ***
 
 select 
 e.ename as '사원 이름',
@@ -78,9 +78,9 @@ select
 from emp as 사원
 inner join emp  as 사수
 on 사원.MGR = 사수.EMPNO 
-where 사원.hiredate < 사수.HIREDATE  
+where 사원.hiredate > 사수.HIREDATE  
 
-8) 업무가 MANAGER이거나 CLERK고 입사날짜가 1982년에 입사한
+8) 업무가 MANAGER이거나 CLERK고 입사날짜가 1982년에 입사한 ***
  사원의 사원번호, 이름, 급여, 직업, 부서명을 출력.
 
 select 
@@ -109,7 +109,7 @@ group by e.DEPTNO
 order by sal desc 
 
 *** 아래 난이도 상 문제 ***
-10)  사원 이름, 부서 번호, 부서명, 근무지역을 출력. 
+10)  사원 이름, 부서 번호, 부서명, 근무지역을 출력.  ***
     단, 사원이 존재하지 않는 부서번호와 부서명도 출력.
 
 select 
@@ -138,3 +138,5 @@ on 사원.deptno = d.DEPTNO
 inner join emp as 사수 
 on 사원.MGR = 사수.EMPNO 
 where d.loc = 'chicago'
+and 사수.sal < 5000
+order by 사원.hiredate asc

@@ -1,0 +1,40 @@
+1.
+select 
+ename,
+dname,
+d.DEPTNO,
+d.LOC 
+from emp as e
+join dept as d
+on e.deptno = d. DEPTNO 
+
+2.
+select
+sum(sal),
+d.dname,
+e.deptno
+from emp as e
+join dept as d 
+on e. deptno = d.DEPTNO 
+group by DEPTNO 
+
+3.
+select
+ename,
+sal
+from emp e 
+join dept d
+on e.deptno = d. DEPTNO 
+where loc = 'new york'
+and job = 'manager'
+
+4.
+select 
+ename,
+dname,
+job,
+ifnull(comm,100)
+from emp e
+join dept d
+on e.deptno = d.DEPTNO 
+where HIREDATE >= date_format(HIREDATE,'%1983-01-01')

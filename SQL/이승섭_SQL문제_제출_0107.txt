@@ -1,0 +1,46 @@
+1.
+select 
+ename,
+sal
+from emp 
+where sal < 1500
+or sal > 2850
+
+2.
+select 
+ename,
+deptno,
+hiredate
+from emp 
+where hiredate >='1981-02-20'
+and hiredate <='1981-05-01'
+order by hiredate asc
+
+3.
+select 
+ename,
+sal
+from emp 
+where deptno=10
+or deptno=30
+having sal > 1500
+
+4.
+select
+ename,
+hiredate
+from emp 
+where hiredate >= '1982-01-01'
+and hiredate <= '1982-12-31'
+
+5.
+select 
+ename,
+job,
+sal
+from emp 
+where job = 'clerk'
+or job = 'analyst'
+having sal != 1000
+and sal != 3000
+and sal != 5000
