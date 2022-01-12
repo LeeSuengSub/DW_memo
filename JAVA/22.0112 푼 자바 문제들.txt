@@ -1,0 +1,105 @@
+//if(만약에)/else(아니라면)
+		int x = 5;
+		int y = 6;
+		
+		if(x==y) 
+		{
+			System.out.println("x와 y는 같아요!");
+		}
+		else
+		{System.out.println("x랑 y는 달라요!");
+			}
+		
+		
+
+
+// A학점 100~ 90
+		// B학점 80~ 89
+		// C학점 70~ 79
+		// D학점 69 이하
+		int myScore = 87;// C학점
+
+		if (myScore >= 90) {
+			System.out.println("A학점입니다.");
+		} else {
+			System.out.println("B학점입니다.");
+		}
+		if (myScore <= 80 && myScore >= 70) {
+			System.out.println("C학점입니다.");
+		}
+		if (myScore <= 69) {
+			System.out.println("D학점입니다.");
+		}
+		
+
+		int x = 10;
+		int y = 10;
+		int num = 0;
+		if (x == y) {
+			num = x * y;
+			if (x != y)
+				num = 0;
+			else {
+				num = num * 2;
+			}
+		} else {
+			num += num;
+		}
+		num = num + 100;
+		System.out.println(num);
+
+
+
+//프로그램 조건	
+		//1. if/else로 풀것.
+		//2.변수선언은 한번만!
+		//3.사칙연산을 이용해서 풀 것.
+		//4.사칙연산 중에 %를 사용할 것.
+		int value = 100;
+		//짝수인지 홀수인지 구별하는 프로그램 구현!
+		if ((value % 2 ) == 0) {
+			System.out.println("짝수입니다.");	
+		}else {
+			System.out.println("홀수입니다.");
+		}
+
+
+		Scanner scan = new Scanner(System.in);// ctrl + Shift +o
+		System.out.println("숫자를 입력하세요 ==>");
+		int value = scan.nextInt();
+	//점수가 90점 이상이면 A
+	//점수가 95점 이상이면 S
+	//조건1. if/else로 사용할 것.	
+		if(value <= 95 && value >= 90) {
+		 System.out.println("A");	
+		}else {
+				if(value >= 95 && value <= 100) {
+					System.out.println("S");
+				}
+
+else if를 활용.
+// 90초과 A, 80점 초과 B, 70점 초과 C, 70점 이하는 F
+		// 조건, else if로 풀어본 것.
+		int score = 88;
+
+		if (score > 90) {
+			System.out.println("A");
+		} else if (score <= 90 && score > 80) {
+			System.out.println("B");
+		} else if (score <= 80 && score > 70) {
+			System.out.println("C");
+		} else {
+			System.out.println("F");
+		}
+
+	//1~10까지의 짝수를 판별
+		//조건. for문을 사용.
+		for(int i=1; i<=10; ++i) {
+			if((i%2) == 0) {
+				System.out.println("짝수"+i);
+	
+			}
+						
+		} 
+	
+
