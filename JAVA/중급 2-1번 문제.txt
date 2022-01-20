@@ -1,0 +1,18 @@
+1.
+ public static void main(String[] args) {
+        String phone = "017-404-1234";
+        String array[] = phone.split("-");
+        	if((array[0]) != "010") {
+        	System.out.println("핸드폰 번호를 변경해야 합니다.");
+        	
+        	array[1] = phone.replace("404", "xxx");
+        	array[2] = phone.replace("1234", "xxxx");
+        	
+        	System.out.println(array);
+        	}
+        //... 코드 작성 ...
+		for(String str : array){
+			System.out.print(str);
+		}
+    }
+}
