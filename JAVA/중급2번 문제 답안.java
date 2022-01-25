@@ -1,4 +1,12 @@
-1.
+1.문제) 문제설명
+상원이는 깜빡하고 고객 핸드폰 번호를 암호화 하지 않고 저장 했다.  
+핸드폰 번호 가운데와 뒷자리를 x로 변경하자.
+
+제한사항
+앞자리가 010이 아니라면 "핸드폰 번호를 변경해야 합니다." 출력.
+핸드폰 번호 중간자리와 끝자리가 4개이면 x4개, 3개면 x3개
+ex) 010-333-0000 -> 010-xxx-xxxx
+
 public static void main(String[] args) {
         String phone = "017-404-1234";
         String array[] = phone.split("-");
@@ -18,7 +26,13 @@ public static void main(String[] args) {
 			System.out.print(str);
 			
 		}
-2.
+2. 문제) 문제설명
+문자열 평균구하기
+
+제한사항
+점수중에 100점이 있다면 "100점 만점에 100점!" 출력.
+평균 소수점 무시. (int형으로 받을 것)
+
 public static void main(String[] args) {
         String scores = "80, 70, 100, 31";
         String[] array = scores.split(",");
@@ -35,8 +49,11 @@ public static void main(String[] args) {
        System.out.print("총점 : "+sum);
        System.out.print("평균 : "+sum/len);
 
-3.
+3.문제) 문제설명
+이름,주소,나이 알아내기
+
 못풀었음.
+
 답안 예시)
 public static void main(String[] args) {
         String query = "name=brian&addr=daejeon&age=30";
