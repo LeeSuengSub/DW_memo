@@ -52,6 +52,9 @@ public void setUser(UserVO vo) {
 		//그래서 set메소드를 이용해서 대입
 		vo.setId(id);
 		vo.setName("홍길동");
+		vo.setEmail("네이버");
+		vo.setLogin(true);
+		vo.setPhone("010");
 		return vo;
 	}
 
@@ -60,10 +63,9 @@ public static void main(String[] args) {
 		UserVO vo = new UserVO();
 		MainService service = new MainService();
 		int id = 30;
-		String name = "";
 		if (id >= 1 && id <= 100) {
 			vo = service.getUser(id);
 		}
-		System.out.println();
-		System.out.println();
+		System.out.println(vo.getId);
+		System.out.println(vo.getName);
 	}
