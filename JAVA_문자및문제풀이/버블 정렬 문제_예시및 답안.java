@@ -17,3 +17,6 @@ int array22[] = {14,11}; //{0,1} <==버블정렬 알고리즘.
 					}
 				}
 			}
+			
+		  for(int i : array) {
+			  System.out.println(i);
