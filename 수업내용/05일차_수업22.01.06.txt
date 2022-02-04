@@ -189,7 +189,7 @@ group by JOB <- 얘
 
 group by는 공통점이 있어야 묶을 수 있다.
 group by는 where 뒤에 온다.
-group by와 통계 ㅎ마수는 친구 사이.
+group by와 통계함수는 친구 사이.
 
 having(통계함수와 같이 쓰이는 코드)
 group by한 애들에서의 필터링하는 코드
