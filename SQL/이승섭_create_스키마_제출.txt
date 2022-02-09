@@ -1,0 +1,6 @@
+CREATE TABLE subject(
+    subject_id INT(11),
+    name VARCHAR(20) not null,
+    create_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    constraint subject_id_pk primary key(subject_id)
+    );
