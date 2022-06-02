@@ -11,16 +11,12 @@ $ git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 
 ```
 branch 삭제
-
 git branch -d <branchname>
 
 branch 확인
-
 git branch
 
 branch 변경
-
-git branch main
+git switch main
 (main으로 branch 변경)
-
 ```
