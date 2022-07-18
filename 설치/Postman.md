@@ -13,12 +13,16 @@ collection 오른쪽 클릭 - add request
 ## Http 메소드별 실행 방법
 ```
 GET : GET 선택하고 주소 넣고 Send
+
 DELETE : DELETE 선택하고 주소 넣고 Send
+
 POST : POST 선택하고 body - raw - JSON 선택
        아래 공간에 json 형태로 데이터를 넣고 Send
+
 PATCH : PATCH 선택하고 body - raw - JSON 선택
        아래 공간에 json형태로 데이터를 넣고 Send
-       ex) json형식{
+
+json형식 ex) {
             "ename" : "홍길동",
             "empno" : "1"
        }
