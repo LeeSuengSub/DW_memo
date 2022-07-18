@@ -39,7 +39,7 @@ ROOT : 프로그래밍 최고 권한
 
 ## auto commit 해제
 ```
-디비버는 aoto commit이 디폴트이기에 설정에서 꺼줘야 한다.
+디비버는 auto commit이 디폴트이기에 설정에서 꺼줘야 한다.
 
 window - preference - connections - connection type에서 auto commit by default 체크 해제하고 재시작
 => auto commit을 해제하면 웹으로 입력받은 데이터를 commit을 하기 전에 DB에서 반영되지 않는다.
