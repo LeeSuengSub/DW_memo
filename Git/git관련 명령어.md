@@ -38,3 +38,11 @@ git switch main
     git push -u origin main
         (저장소에 푸쉬)
 ```
+
+## SSH 설정
+```
+ssh키 생성
+
+-> ssh-keygen -t rsa -C"이메일 주소 입력"
+-> 엔터-> 비밀번호 설정-> 비밀번호 재입력
+```
