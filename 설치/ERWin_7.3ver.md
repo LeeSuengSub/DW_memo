@@ -3,11 +3,16 @@
 프로그램 다운로드
 
 1. file - new를 누르면 create model창이 나오고, 모델 타입 logical로 실행
-1-1. (logical : 모델링만 / physical : 모델링 + create)
+
+    1-1. (logical : 모델링만 / physical : 모델링 + create)
+
 2. model - model properties - notation - ie 체크하고 확인
+
 3. 상단 두번째 표시줄 중에서 entity버튼으로 테이블 생성,
     테이블 제목 입력하고 tab키 눌러서 차례로 PK와 컬럼들 입력
+
 4. 테이블 더블클릭해서 데이터타입 수정 또는 새 컬럼 추가
+
 5. 관계 버튼중에 점선(Non-identifying relationsip) 클릭, pk가 될 테이블을 누르고 FK가 만들어질 클릭해서 연결.
 
 => 논리적 모델링 완성
