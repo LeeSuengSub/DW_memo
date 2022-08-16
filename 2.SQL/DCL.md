@@ -1,7 +1,7 @@
 # DCL
 ---
 
-## DCL(Data Control Language)
+## DCL(Data Control Language) 데이터 제어 언어
 ---
 ```
 

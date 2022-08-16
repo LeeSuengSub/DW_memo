@@ -4,7 +4,7 @@
 ## DML(Data Manipulation Language) 데이터 조작 언어
 ---
 ```
-table 안에 있는 데이터를 관리하는 명렬어
+table 안에 있는 데이터를 관리하는 명령어
 ```
 
 ## 종류
